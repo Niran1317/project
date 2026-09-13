@@ -1,32 +1,37 @@
-# Personalized Medical Recommendation System (Educational Demo)
+# Activity Minimization of Misinformation Influence in Online Social Networks
 
-An educational machine-learning project that uses an SVM classifier to map a small set of symptom inputs to a broad example condition category.
+An educational Java project that demonstrates graph-based greedy node blocking to reduce potential misinformation spread, together with a simple Bloom-filter-based spam keyword screening component.
 
 ## Technologies
-- Python
-- Pandas
-- Scikit-learn
-- SVM
-- Joblib
+- Java
+- HTML
+- CSS
+- JavaScript
+- Graph data structures
+- Greedy heuristic
+- Bloom filter
 
-## How it works
-1. Load the example symptom dataset.
-2. Split the data into training and test sets.
-3. Scale features.
-4. Train a linear Support Vector Machine.
-5. Save the trained model.
-6. Accept symptom inputs from the user.
-7. Display the predicted category and general, non-prescriptive advice.
+## Algorithm
+The demo represents a social network as an undirected graph G(V,E). Nodes represent users and edges represent relationships. A greedy heuristic repeatedly chooses a high-impact candidate node and marks it as blocked.
 
-## Run
+The demo also uses a Bloom filter to perform fast probabilistic membership checks for spam-related keywords.
+
+## Run the Java project
+From the project root:
+
 ```bash
-pip install -r requirements.txt
-python train_model.py
-python app.py
+mkdir out
+javac -d out src/Main.java
+java -cp out Main
 ```
 
-## Important limitation
-This repository is an educational demonstration using a tiny synthetic dataset. It is **not a medical diagnostic or prescription system**. It must not be used to select medicines or make healthcare decisions. Real clinical systems require validated datasets, clinical oversight, safety testing, privacy controls, and regulatory compliance.
+## Run the web interface
+Open `web/index.html` in a browser.
+
+The web interface is a standalone demonstration. The Java algorithm runs separately from the static frontend in this version.
+
+## Limitations
+The graph is a small synthetic example. It is not a production social-network moderation system and does not connect to Twitter, Facebook, or other live platforms.
 
 ## Resume description
-**Medical Recommendation System:** Built an educational SVM-based machine-learning application that classifies symptom patterns into broad condition categories and presents non-prescriptive health guidance.
+**Misinformation Influence Minimization:** Developed a Java-based graph algorithm using a greedy node-blocking heuristic to reduce potential misinformation influence, with a Bloom-filter-based spam screening component and HTML/CSS/JavaScript interface.

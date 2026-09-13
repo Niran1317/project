@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Misinformation Influence Minimization</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Misinformation Influence Minimization</h1>
+    <p>Educational interface for the graph-based project.</p>
+
+    <section class="card">
+      <h2>Project Workflow</h2>
+      <ol>
+        <li>Represent users as nodes in a social graph.</li>
+        <li>Represent relationships as edges.</li>
+        <li>Rank candidate nodes by their current influence/degree.</li>
+        <li>Greedily block selected high-impact nodes.</li>
+        <li>Use a Bloom filter for fast keyword-based spam screening.</li>
+      </ol>
+    </section>
+
+    <section class="card">
+      <h2>Try Spam Detection</h2>
+      <textarea id="message" placeholder="Enter a message..."></textarea>
+      <button id="checkBtn">Check Message</button>
+      <p id="result"></p>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
