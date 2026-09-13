@@ -1,45 +1,32 @@
-# Age & Gender Detection using OpenCV
+# Personalized Medical Recommendation System (Educational Demo)
 
-A computer-vision project that detects faces from a webcam and predicts an approximate age group and gender using pretrained OpenCV DNN models.
+An educational machine-learning project that uses an SVM classifier to map a small set of symptom inputs to a broad example condition category.
 
 ## Technologies
 - Python
-- OpenCV
-- NumPy
-- Deep Neural Network (DNN)
+- Pandas
+- Scikit-learn
+- SVM
+- Joblib
 
-## Project structure
-```text
-Age-Gender-Detection/
-├── main.py
-├── requirements.txt
-├── models/
-│   └── README.md
-├── sample/
-└── .gitignore
-```
-
-## Setup
-```bash
-python -m venv venv
-# Windows
-venv\Scripts\activate
-# macOS/Linux
-source venv/bin/activate
-
-pip install -r requirements.txt
-```
-
-Place the six required pretrained model files inside `models/`. See `models/README.md`.
+## How it works
+1. Load the example symptom dataset.
+2. Split the data into training and test sets.
+3. Scale features.
+4. Train a linear Support Vector Machine.
+5. Save the trained model.
+6. Accept symptom inputs from the user.
+7. Display the predicted category and general, non-prescriptive advice.
 
 ## Run
 ```bash
-python main.py
+pip install -r requirements.txt
+python train_model.py
+python app.py
 ```
-Press `Q` to exit.
 
-## Important note
-Age and gender predictions are approximate model outputs and should not be treated as verified personal attributes.
+## Important limitation
+This repository is an educational demonstration using a tiny synthetic dataset. It is **not a medical diagnostic or prescription system**. It must not be used to select medicines or make healthcare decisions. Real clinical systems require validated datasets, clinical oversight, safety testing, privacy controls, and regulatory compliance.
 
 ## Resume description
-**Age & Gender Detection:** Developed a computer-vision application using OpenCV DNN models to detect faces and estimate age groups and gender from a live webcam feed.
+**Medical Recommendation System:** Built an educational SVM-based machine-learning application that classifies symptom patterns into broad condition categories and presents non-prescriptive health guidance.
